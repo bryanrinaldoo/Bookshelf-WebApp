@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+/* BAGIAN HEADER */
+
+html {
+    --top-spacing: 115px;
+    scroll-padding-top: var(--top-spacing);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    /* margin: var(--top-spacing) auto; */
+}
+
+
+header {
+    background: #21314a;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+h1 {
+    float: left;
+    margin-left: 50px;
+}
+
+h1 img {
+    height: 60px;
+    margin: 10px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav li {
+    display: inline-block;
+    line-height: 80px;
+}
+
+nav ul a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px 30px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+nav ul a:hover {
+    background: rgb(65, 80, 144);
+    background: linear-gradient(90deg, rgba(65, 80, 144, 1) 0%, rgba(38, 62, 98, 1) 81%);
+    transition: .8s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+    padding: 10px 30px;
+}
+
+#check {
+    display: none;
+}
+
+/* BAGIAN SECTION 1 */
+
+
+#menu1 {
+    align-items: center;
+    justify-content: center;
+}
+
+#menu1 h3 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.input_section {
+    flex-direction: column;
+    padding: 45px;
+    margin-top: 90px;
+}
+
+#menu1 .addBook {
+    margin-top: 20px;
+}
+
+#menu1 #inputBook{
+    margin-right: 11px;
+}
+
+
+/* BAGIAN SECTION 2 */
+
+.heading {
+    text-align: center;
+    background: var(--gradient);
+    color: rgb(82, 88, 173);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 80px;
+    text-transform: uppercase;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 0%;
+}
+
+
+.box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box-container .box {
+    flex: 1 1 30px;
+    background: white;
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    margin: 1.5rem;
+    padding: 15px 10px;
+    border-radius: .5rem;
+    text-align: center;
+    transition: .2s ease-in-out;
+    text-decoration: none;
+    color: black;
+    min-width: 150px;
+    display: flex;
+}
+
+.box-container a {
+    font-size: 45px;
+    margin: 10px;
+    min-width: 40%;
+    padding: 10px;
+    max-width: 40%;
+    text-decoration: none;
+    color: unset;
+}
+
+.box-container p {
+    padding-top: 30px;
+    margin-right: 8%;
+    position: relative;
+    min-width: 3%;
+    max-width: 3%;
+}
+
+
+
+/* BUTTON LIQUID */
+.bottoms {
+    text-align: center;
+    margin: 10px;
+    margin-top: 20px;
+    display: block;
+    min-height: 140px;
+    justify-content: flex-end;
+}
+
+.bottoms .bottoms-satu {
+    min-height: 70px;
+}
+
+.bottoms .bottoms-dua {
+    min-height: 70px;
+}
+
+.bottoms button {
+    text-decoration: none;
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 17px;
+    position: absolute;
+    overflow: hidden;
+    width: 300px;
+    position: relative;
+    border: none;
+}
+
+.bottoms button span {
+    position: relative;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 5px;
+    z-index: 1;
+    font-family: 'Lexend Deca', sans-serif;
+    transition: color 0.5s linear;
+}
+
+.bottoms button .liquid {
+    position: absolute;
+    top: -140px;
+    left: 0px;
+    width: 320px;
+    height: 320px;
+    background: rgb(65, 80, 144);
+    background: linear-gradient(90deg, rgba(65, 80, 144, 1) 0%, rgba(38, 62, 98, 1) 81%);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: .5s;
+}
+
+.bottoms button .liquid::after,
+.bottoms button .liquid::before {
+    content: "";
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 75%);
+    background: white;
+}
+
+.bottoms button .liquid::before {
+    border-radius: 45%;
+    background: rgb(255, 255, 255);
+    animation: wave 5s linear infinite;
+}
+
+.bottoms button .liquid::before {
+    border-radius: 40%;
+    background: rgb(255, 255, 255);
+    animation: wave 10s linear infinite;
+}
+
+.bottoms button:hover .liquid {
+    top: -200px;
+}
+
+.bottoms button:hover span {
+    transition: .5s;
+    color: white;
+}
+
+@keyframes wave {
+    0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
+
+/* BAGIAN FAQ */
+
+#menu4{
+    margin-bottom: 50px;
+}
+/* BAGIAN MOBILE  */
+@media (max-width: 1120px) {
+
+    .bottoms {
+        text-align: center;
+        margin: 10px;
+        margin-top: 20px;
+        display: block;
+        min-height: 140px;
+    }
+
+    .bottoms .bottoms-satu {
+        justify-content: flex-start;
+        margin-right: 0;
+        min-height: 70px;
+    }
+
+    .bottoms .bottoms-dua {
+        justify-content: right;
+        margin-left: 0;
+        min-height: 70px;
+    }
+
+    .bottoms button {
+        position: relative;
+    }
+}
+
+@media (max-width: 952px) {
+    header {
+        height: 100px;
+    }
+
+    h1 {
+        margin-left: 30px;
+    }
+    h1 img{
+        height: 50px;
+        margin-top: 26px;
+    }
+
+    #menu1 {
+        flex-direction: column;
+    }
+
+    #menu1 form {
+        margin-left: 0px;
+        text-align: justify;
+    }
+
+    #menu1 form h3 {
+        font-size: 50px;
+        margin-bottom: 0%;
+    }
+
+    #menu1 form p {
+        margin-top: 0%;
+        font-size: 15px;
+    }
+
+    .box-container .box {
+        display: block;
+    }
+
+    .box-container a {
+        min-width: 0;
+        padding-top: 0;
+        max-width: none;
+    }
+
+    .box-container p {
+        padding-top: 0;
+        margin-right: 0;
+        min-width: none;
+        max-width: none;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        float: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #21314a;
+        top: 80px;
+        left: 120%;
+        text-align: center;
+        transition: all .7s;
+        box-sizing: unset;
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 36px;
+    }
+
+    nav ul a {
+        padding: 20px 80px;
+    }
+
+    a:hover {
+        background: none;
+        color: rgb(150, 212, 228);
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+    #check:unchecked~ul {
+        transition: 1s;
+    }
+
+    .heading {
+        font-size: 50px;
+    }
+}
